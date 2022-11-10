@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nome',10);
             $table->string('endereco',10);
             $table->string('cnpj',20);
-            $table->integer('telefone',10)->nullable();
+            $table->integer('telefone')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

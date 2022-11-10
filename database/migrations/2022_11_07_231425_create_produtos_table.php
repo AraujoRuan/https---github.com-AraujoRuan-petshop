@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
-            $table->unique('empresa_id');
-            $table->unique('marca_id');
+            $table->string('empresa_id');
+            $table->string('marca_id');
             $table->string('nome',50);
-            $table->integer('valor',50);
-            $table->dateTime('validade', 50);
+            $table->integer('valor');
+            $table->dateTime('validade');
             $table->timestamps();
             $table->softDeletes();
         });

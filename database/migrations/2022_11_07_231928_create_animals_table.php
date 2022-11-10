@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->unique('empresa_id');
-            $table->unique('funcionario_id');
-            $table->unique('cliente_id');
+            $table->string('empresa_id');
+            $table->string('funcionario_id');
+            $table->string('cliente_id');
             $table->string('nome',50);
             $table->string('sexo',10);
-            $table->integer('idade',10);
+            $table->integer('idade');
             $table->string('raca',50);
             $table->string('cor',10);
             $table->timestamps();

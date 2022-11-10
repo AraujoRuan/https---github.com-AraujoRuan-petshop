@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('marcas', function (Blueprint $table) {
             $table->id();
-            $table->unique('emprea_id');
-            $table->unique('produto_id');
+            $table->string('emprea_id');
+            $table->string('produto_id');
             $table->string('nome',50);
             $table->timestamps();
             $table->softDeletes();
