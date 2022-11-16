@@ -14,6 +14,12 @@ class MarcaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $this->call([
+            MarcaSeeder::class,
+            EmpresaSeeder::class,
+            ProdutoSeeder::class,
+            ClienteSeeder::class,
+            FuncionarioSeeder::class,
+        ]);
     }
 }
