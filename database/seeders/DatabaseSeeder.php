@@ -19,8 +19,7 @@ class DatabaseSeeder extends Seeder
         User::insert([
             'name'=>'admin',
             'email'=>'admin@admin.com',
-            'password'=>bcrypt('admin'),
-            'created_at'=>now()
+            'password'=>bcrypt('admin')
         ]);
 
         $this->call([
