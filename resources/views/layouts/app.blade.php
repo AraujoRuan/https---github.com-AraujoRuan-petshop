@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         {{$slot}}
+        <livewire:loja/>
     </div>
     @livewireStyles
 </body>
