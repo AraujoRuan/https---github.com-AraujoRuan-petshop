@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Loja;
 
 
 Route::get('/', function () {
@@ -17,6 +16,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-
-Route::get('/loja',Loja::class)->name('loja');

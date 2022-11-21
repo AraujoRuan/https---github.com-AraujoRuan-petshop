@@ -1,3 +1,4 @@
 <div>
-    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
+   Loja {{$message}}
+   <input type="text" wire:model='message'>
 </div>
