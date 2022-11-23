@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+
+use App\Models\Cliente;
 use Livewire\Component;
 
 class Loja extends Component
@@ -10,6 +12,15 @@ class Loja extends Component
 
     public function render()
     {
-        return view('livewire.loja');
+         $loja = Cliente::with('user')->get();
+
+        return view('livewire.loja',[
+            'loja'=> $loja
+        ]);
+    }
+
+    public function create()
+    {
+        dd($this->message);
     }
 }
