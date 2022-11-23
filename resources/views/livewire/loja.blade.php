@@ -1,4 +1,4 @@
 <div>
-   Loja {{$message}}
+   {{$message}}
    <input type="text" wire:model='message'>
 </div>

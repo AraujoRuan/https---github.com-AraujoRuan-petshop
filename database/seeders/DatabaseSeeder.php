@@ -16,18 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::insert([
-            'name'=>'admin',
-            'email'=>'admin@admin.com',
-            'password'=>bcrypt('admin')
-        ]);
-
         $this->call([
             MarcaSeeder::class,
             EmpresaSeeder::class,
             ProdutoSeeder::class,
             ClienteSeeder::class,
             FuncionarioSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
