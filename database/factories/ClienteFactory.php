@@ -17,7 +17,8 @@ class ClienteFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome'=> $this->faker->name(),
+            'empresa_id'=>1,
         ];
     }
 }

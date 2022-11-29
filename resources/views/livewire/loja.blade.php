@@ -10,6 +10,6 @@
    <hr>
 
    @foreach ($loja as $loja)
-      {{$loja->user->name}} - {{$loja->content}} <br>
+      {{$loja->nome}} <br>
    @endforeach
 </div>

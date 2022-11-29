@@ -2,25 +2,28 @@
 
 namespace App\Http\Livewire;
 
-
-use App\Models\Cliente;
 use Livewire\Component;
 
 class Loja extends Component
 {
     public $message = "";
+    public $loja;
 
     public function render()
     {
-         $loja = Cliente::with('user')->get();
-
-        return view('livewire.loja',[
-            'loja'=> $loja
-        ]);
+         $this->loja = \App\Models\Loja::all();
+        //  $this->loja->marcas->produtos->get();
+        //  $this->loja->cliente->empresa->user->get();
+        
+        return view('livewire.loja');
     }
 
     public function create()
     {
-        dd($this->message);
+        \App\Models\Loja::create([
+            'nome'=>$this->message,
+
+        ]);
+               $this->render();
     }
 }

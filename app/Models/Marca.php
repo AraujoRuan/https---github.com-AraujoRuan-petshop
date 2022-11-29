@@ -11,7 +11,7 @@ class Marca extends Model
 
     public function produto()
     {
-        return $this->belongsToMany(Produto::class,'produto_id');
+        return $this->hasMany(Produto::class,'produto_id');
     }
 
     public function empresa()
@@ -19,3 +19,4 @@ class Marca extends Model
         return $this->belongsTo(empresa::class,'produto_id');
     }
 }
+

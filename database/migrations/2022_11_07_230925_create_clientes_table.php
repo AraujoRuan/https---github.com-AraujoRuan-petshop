@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->string('empresa_id');
             $table->string('nome',50);
-            $table->string('endereco',40);
-            $table->string('cpf',20);
-            $table->integer('telefone');
+            $table->string('endereco',40)->nullable();
+            $table->string('cpf',20)->nullable();
+            $table->integer('telefone')->nullable();
+            $table->foreignId('empresa_id')->references('id')->on('empresas');
             $table->timestamps();
             $table->softDeletes();
         });
