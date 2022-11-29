@@ -5,11 +5,11 @@
       <input type="text" name="message" id="message" wire:model='message'>
       <button type="submit">Pesquisar</button>
    </form>
-   
+
 
    <hr>
 
    @foreach ($loja as $loja)
-      {{$loja->nome}} <br>
+      {{$loja->nome}} - {{ $loja->cliente->nome }}<br>
    @endforeach
 </div>

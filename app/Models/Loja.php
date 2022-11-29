@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Cliente;
 
 class Loja extends Model
 {
@@ -12,11 +13,13 @@ class Loja extends Model
         'nome',
         'endereco',
         'cnpj',
-        'telefone'
+        'telefone',
+        'cliente_id'
+
     ];
 
-   
-   
+
+
     public function funcionario()
     {
         return $this->hasMany(Funcionarios::class,"funcionario_id");
@@ -24,7 +27,7 @@ class Loja extends Model
 
     public function cliente()
     {
-        return $this->belongsTo(Clientes::class,"cliente_id");
+        return $this->belongsTo(Cliente::class,"cliente_id");
     }
 
     public function marca()
